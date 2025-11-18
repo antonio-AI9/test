@@ -1,0 +1,20 @@
+---
+title: "test3"
+output: html_document
+date: "2025-11-18"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("data_prep.R") #runs data prep before markdown
+```
+
+Below is the code to plot my data 
+
+```{r}
+walking_data_tidied %>% 
+  ggplot()+
+  geom_histogram(aes(x=steps), binwidth=1000, color="white", fill="red")+
+  theme_minimal()
+```
+
